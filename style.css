@@ -92,4 +92,19 @@ body h1 {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__section {
+  background-color: black;
+  height: 20vh;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
