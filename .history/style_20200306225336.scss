@@ -21,8 +21,6 @@ body {
 
 .hero {
   height: 90vh;
-  display: flex;
-  justify-content: center;
 }
 
 .nav {
@@ -54,6 +52,7 @@ body {
       &:hover {
         background-color: black;
         color: white;
+        transition: 0.3s ease;
       }
     }
 
