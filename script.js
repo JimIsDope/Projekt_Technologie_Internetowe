@@ -11,7 +11,7 @@ const navItemsSlide = () => {
     //Animation
     navItems.forEach((item, index) => {
       item.style.animation = `navItemsFade 0.5s ease forwards ${index / 7 +
-        2}s`;
+        0.7}s`;
       item.style.margin = 0;
     });
   });

@@ -130,16 +130,6 @@ body h1 {
   transition: 0.3s ease;
 }
 
-.nav__items-active {
-  padding-top: 30%;
-  padding-bottom: 30%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transform: translateX(0%) !important;
-          transform: translateX(0%) !important;
-}
-
 .hamburger-active div {
   background-color: white !important;
 }
@@ -261,6 +251,11 @@ body h1 {
     background-color: black;
     color: white;
     width: 40%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -270,6 +265,10 @@ body h1 {
   }
   .nav__items li {
     opacity: 0;
+  }
+  .nav__items-active {
+    -webkit-transform: translateX(0%) !important;
+            transform: translateX(0%) !important;
   }
 }
 

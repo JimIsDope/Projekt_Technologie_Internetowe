@@ -102,12 +102,7 @@ body {
     }
   }
 }
-.nav__items-active {
-  padding-top: 30%;
-  padding-bottom: 30%;
-  justify-content: space-between;
-  transform: translateX(0%) !important;
-}
+
 .hamburger-active {
   & div {
     background-color: white !important;
@@ -211,11 +206,17 @@ body {
     background-color: black;
     color: white;
     width: 40%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    justify-content: space-between;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     & li {
       opacity: 0;
     }
+  }
+  .nav__items-active {
+    transform: translateX(0%) !important;
   }
 }
 @media screen and (max-width: 867px) {
