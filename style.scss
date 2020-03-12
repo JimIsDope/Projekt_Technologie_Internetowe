@@ -28,8 +28,14 @@ body {
 
 .hero {
   height: 90vh;
+  width: 100%;
   display: flex;
   justify-content: center;
+  padding: 20px;
+
+  & img {
+    width: 100%;
+  }
 }
 
 .nav {
@@ -44,7 +50,6 @@ body {
   &__items {
     list-style: none;
     margin: 0;
-    padding: 5px;
     display: inline-flex;
     position: relative;
     width: auto;
@@ -138,5 +143,38 @@ body {
       }
     }
 
+  }
+}
+
+@media(max-width: 500px) {
+  .footer__section__items {
+    font-size: 0.6em;
+  }
+
+  .footer__section__items__icons a {
+    padding: 0px 5px;
+  }
+
+  .footer__section__items__icons__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media(max-width:1920px) {
+  .footer {
+    width: 100%;
+  }
+}
+
+@media(max-width:830px) {
+  .nav {
+    padding: 10px 20px;
+  }
+
+  .nav__items .language,
+  .nav__items li {
+    padding: 8px 10px;
+    font-size: 13px;
   }
 }
