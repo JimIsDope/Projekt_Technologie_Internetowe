@@ -14,8 +14,7 @@ body {
 body h1 {
   margin-right: auto;
   padding: 0;
-  color: white;
-  background-color: black;
+  color: black;
   padding: 10px 20px;
   border-radius: 50px;
 }
@@ -91,5 +90,19 @@ body h1 {
   color: white;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__section {
+  background-color: black;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
