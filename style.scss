@@ -35,6 +35,7 @@ body {
 }
 
 .nav {
+  position: relative;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -216,7 +217,6 @@ body {
 @media screen and (max-width: 768px) {
   body,
   html {
-    position: relative;
     overflow-x: hidden;
   }
   .hamburger {
