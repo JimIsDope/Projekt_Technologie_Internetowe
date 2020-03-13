@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font: 500 16px Roboto;
   margin: 0;
@@ -129,11 +125,8 @@ body h1 {
 }
 
 .nav__items li:last-child {
-  padding: 0;
-}
-
-.nav__items li:last-child {
   margin-right: 0px;
+  padding: 0;
 }
 
 .nav__items li:hover {
@@ -253,7 +246,9 @@ body h1 {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  body,
+  html {
+    position: relative;
     overflow-x: hidden;
   }
   .hamburger {

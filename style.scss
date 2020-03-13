@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font: 500 16px Roboto;
   margin: 0;
@@ -58,7 +54,6 @@ body {
     background-color: black;
     margin: 5px;
     transition: all 0.3s ease-in-out;
-
   }
 
   &__items {
@@ -97,10 +92,6 @@ body {
     }
 
     & li {
-      &:last-child {
-        padding: 0;
-      }
-
       cursor: pointer;
       margin-right: 10px;
       padding: 8px 20px;
@@ -109,6 +100,7 @@ body {
 
       &:last-child {
         margin-right: 0px;
+        padding: 0;
       }
 
       &:hover {
@@ -127,10 +119,8 @@ body {
 }
 
 .hamburger__line-active {
-
   &:first-child {
     transform: rotate(-45deg) translate(-5px, 6px);
-
   }
 
   &:nth-child(2) {
@@ -139,8 +129,6 @@ body {
 
   &:last-child {
     transform: rotate(45deg) translate(-5px, -6px);
-    ;
-
   }
 }
 
@@ -214,7 +202,7 @@ body {
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   .nav__items {
     width: 100% !important;
 
@@ -225,13 +213,12 @@ body {
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
-  body {
+  body,
+  html {
+    position: relative;
     overflow-x: hidden;
   }
-
   .hamburger {
     display: block !important;
     z-index: 1;
