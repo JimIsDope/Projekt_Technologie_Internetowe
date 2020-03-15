@@ -1,0 +1,11 @@
+.hero {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    & img {
+        width: 100%;
+    }
+}

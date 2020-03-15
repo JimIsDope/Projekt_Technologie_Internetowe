@@ -5,6 +5,7 @@ const navItemsSlide = () => {
   const nav = document.querySelector(".nav__items");
   const navItems = document.querySelectorAll(".nav__items li");
   const btnLang = document.querySelector(".language");
+
   //Toggle class active
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav__items-active");
@@ -13,6 +14,7 @@ const navItemsSlide = () => {
       item.classList.toggle("hamburger__line-active");
     });
     btnLang.classList.toggle("language-mobile");
+
     //Animation
     navItems.forEach((item, index) => {
       if (item.style.animation) {
