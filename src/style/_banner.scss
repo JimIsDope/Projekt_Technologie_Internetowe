@@ -1,0 +1,14 @@
+.banner {
+    height: 38vh;
+    width: 100% !important;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("../images/eat_sleep_code_repat.svg");
+    background-repeat: no-repeat;
+
+    & div {
+        padding: 100px;
+    }
+
+}

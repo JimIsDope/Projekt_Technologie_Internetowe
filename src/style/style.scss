@@ -1,6 +1,9 @@
 @import "./navigation";
 @import "./hero";
 @import "./footer";
+@import "./banner";
+@import "./button";
+@import "./about";
 
 *,
 *::before,
@@ -8,8 +11,12 @@
   box-sizing: border-box;
 }
 
+section {
+  padding: 25px 0;
+}
+
 body {
-  font: 500 16px Roboto;
+  font: 500 16px Montserrat;
   margin: 0;
   padding: 0;
   display: flex;
@@ -18,11 +25,7 @@ body {
   width: auto;
 
   & h1 {
-    margin-right: auto;
-    padding: 0;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 50px;
+    font-size: 30px;
   }
 }
 
@@ -36,7 +39,6 @@ body {
 
 
 }
-
 
 @keyframes navItemsFade {
   from {
