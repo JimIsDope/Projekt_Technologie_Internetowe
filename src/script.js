@@ -1,10 +1,41 @@
 import { gsap } from "gsap";
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 
 //GSAP
 const gsapAnimation = () => {
   //Hero
   const hero = document.querySelector(".hero");
   gsap.from(hero, { opacity: 0, duration: 1, y: -50 });
+};
+
+//Form JQuery
+const formAnimation = () => {
+  $("input").focus(function () {
+    $(this).parents(".form__group").addClass("focused");
+  });
+  $("textarea").focus(function () {
+    $(this).parents(".form__group").addClass("focused");
+  });
+  $("input").blur(function () {
+    var inputValue = $(this).val();
+    if (inputValue == "") {
+      $(this).removeClass("filled");
+      $(this).parents(".form__group").removeClass("focused");
+    } else {
+      $(this).addClass("filled");
+    }
+  });
+  $("textarea").blur(function () {
+    var areaValue = $(this).val();
+    if (areaValue == "") {
+      $(this).removeClass("filled");
+      $(this).parents(".form__group").removeClass("focused");
+    } else {
+      $(this).addClass("filled");
+    }
+  });
 };
 
 //Hamburger slider
@@ -43,6 +74,8 @@ const changeLanguage = () => {
   const btnLang = document.querySelector(".button-language");
   const btnBanner = document.querySelector(".button-banner");
   const navList = document.querySelectorAll(".nav__li a");
+  const aboutTitle = document.querySelector(".aboutTitle");
+  const aboutText = document.querySelector(".aboutText");
   btnLang.addEventListener("click", () => {
     navList[0].textContent = "home";
     navList[1].textContent = "about";
@@ -50,6 +83,8 @@ const changeLanguage = () => {
     navList[3].textContent = "contact";
     btnLang.textContent = "polski";
     btnBanner.textContent = "contact";
+    aboutTitle.textContent = "about";
+    aboutText.textContent = "Text in english, lorem impsum....";
   });
 };
 
@@ -57,6 +92,7 @@ const App = () => {
   gsapAnimation();
   navItemsSlide();
   changeLanguage();
+  formAnimation();
 };
 
 App();

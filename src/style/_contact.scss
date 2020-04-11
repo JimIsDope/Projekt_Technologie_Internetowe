@@ -1,0 +1,85 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  & form {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    padding: 60px 0;
+
+    .form__group {
+      position: relative;
+
+      & + .form__group {
+        margin-top: 30px;
+      }
+    }
+
+    .form__label {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: #999;
+      background-color: #fff;
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+
+    .focused .form__label {
+      transform: translateY(-125%);
+      font-size: 0.75em;
+    }
+
+    .form__input {
+      position: relative;
+      padding: 12px 0px 5px 0;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      box-shadow: 0 1px 0 0 #e5e5e5;
+      transition: box-shadow 150ms ease-out;
+
+      &:focus {
+        box-shadow: 0 2px 0 0 black;
+      }
+    }
+    .form__textarea {
+      position: relative;
+      padding: 12px 0px 5px 0;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      box-shadow: 0 1px 0 0 #e5e5e5;
+      resize: vertical;
+      min-height: 150px;
+      &:focus {
+        box-shadow: 0 2px 0 0 black;
+      }
+    }
+    .form__input.filled {
+      box-shadow: 0 2px 0 0 lightgreen;
+    }
+  }
+  & h1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+
+    form {
+      display: grid;
+      grid-row-start: none;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: 60px 70px;
+    }
+  }
+}

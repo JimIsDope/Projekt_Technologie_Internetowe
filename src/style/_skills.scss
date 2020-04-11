@@ -1,0 +1,169 @@
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+  &__title {
+    margin: 0;
+    padding: 40px 50px;
+    text-align: center;
+  }
+  & h1 {
+    grid-column-start: 2;
+  }
+  &__html {
+    grid-row-start: 2;
+    height: 67vh;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 35% 40px 1fr;
+    & .html {
+      &__img {
+        font-size: 130px;
+      }
+      &__title {
+        & h1 {
+          margin: 0;
+        }
+      }
+      &__desc {
+        padding: 30px 50px;
+      }
+    }
+  }
+
+  &__css {
+    grid-row-start: 2;
+    height: 67vh;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 35% 40px 1fr;
+    & .css {
+      &__img {
+        font-size: 130px;
+      }
+      &__title {
+        & h1 {
+          margin: 0;
+        }
+      }
+      &__desc {
+        padding: 30px 50px;
+      }
+    }
+  }
+
+  &__js {
+    grid-row-start: 2;
+    height: 67vh;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 35% 40px 1fr;
+    & .js {
+      &__img {
+        background-image: url("../images/js-brands.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130px 130px;
+      }
+      &__title {
+        & h1 {
+          margin: 0;
+        }
+      }
+      &__desc {
+        padding: 30px 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    grid-template-columns: none;
+    grid-template-rows: 116px 1fr 1fr 1fr;
+    h1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &__html {
+      grid-column-end: 3;
+      grid-column-start: 1;
+      .html {
+        &__desc {
+          padding: 30px 150px;
+        }
+      }
+    }
+    &__css {
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      .css {
+        &__desc {
+          padding: 30px 150px;
+        }
+      }
+    }
+    &__js {
+      grid-row-start: 4;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      .js {
+        &__desc {
+          padding: 30px 150px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .skills {
+    &__html {
+      .html {
+        &__desc {
+          padding: 30px 80px;
+        }
+      }
+    }
+    &__css {
+      .css {
+        &__desc {
+          padding: 30px 80px;
+        }
+      }
+    }
+    &__js {
+      .js {
+        &__desc {
+          padding: 30px 80px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  .skills {
+    &__html {
+      .html {
+        &__desc {
+          padding: 20px 40px;
+        }
+      }
+    }
+    &__css {
+      .css {
+        &__desc {
+          padding: 20px 40px;
+        }
+      }
+    }
+    &__js {
+      .js {
+        &__desc {
+          padding: 20px 40px;
+        }
+      }
+    }
+  }
+}
