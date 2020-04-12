@@ -1,10 +1,12 @@
-import { formAnimation } from "./formAnimation";
-import { navItemsSlide } from "./navItemsSlide";
-import { changeLanguage } from "./changeLanguage";
-import { scrollPage } from "./scrollPage";
-import { gsapAnimation } from "./gsapAnimations";
+import { formAnimation } from "./FormAnimation";
+import { navItemsSlide } from "./NavItemsSlide";
+import { changeLanguage } from "./ChangeLanguage";
+import { scrollPage } from "./ScrollPage";
+import { gsapAnimation } from "./GsapAnimations";
+import { stickyNavbar } from "./StickyNavbar";
 
 const App = () => {
+  stickyNavbar();
   gsapAnimation();
   navItemsSlide();
   changeLanguage();

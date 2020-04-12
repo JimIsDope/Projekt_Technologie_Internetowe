@@ -1,6 +1,7 @@
 .nav {
   position: relative;
   height: 10vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -66,7 +67,12 @@
     }
   }
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
 .hamburger-active {
   & div {
     background-color: white !important;

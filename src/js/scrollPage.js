@@ -2,8 +2,13 @@ import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
 
+export const backtoNav = (navid) => {
+  var navTag = $(`nav[id="${anchorId}"]`);
+  var bodyHTML = $("html,body");
+  bodyHTML.animate({ scrollTop: navTag.offset().top }, "slow");
+};
 export const scrollPage = (anchorId) => {
-  var divTag = $("div[id='" + anchorId + "']");
+  var divTag = $(`div[id="${anchorId}"]`);
   var bodyHTML = $("html,body");
   bodyHTML.animate({ scrollTop: divTag.offset().top }, "slow");
 };
