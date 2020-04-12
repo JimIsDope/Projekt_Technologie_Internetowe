@@ -6,6 +6,7 @@
 @import "./about";
 @import "./skills";
 @import "./contact";
+@import "./projects";
 *,
 *::before,
 *::after {
@@ -23,7 +24,7 @@ body {
   overflow-x: hidden;
 
   & .section {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 
   & h1 {
