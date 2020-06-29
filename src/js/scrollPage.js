@@ -3,7 +3,7 @@ window.jQuery = $;
 window.$ = $;
 
 export const backtoNav = (navid) => {
-  var navTag = $(`nav[id="${anchorId}"]`);
+  var navTag = $(`nav[id="${navid}"]`);
   var bodyHTML = $("html,body");
   bodyHTML.animate({ scrollTop: navTag.offset().top }, "slow");
 };
@@ -13,7 +13,7 @@ export const scrollPage = (anchorId) => {
   bodyHTML.animate({ scrollTop: divTag.offset().top }, "slow");
 };
 $("#top-anchor").click(function () {
-  scrollPage("top");
+  backtoNav("main-site");
 });
 $("#about-anchor").click(function () {
   scrollPage("about");
